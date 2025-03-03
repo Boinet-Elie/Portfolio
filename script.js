@@ -1,39 +1,41 @@
-// Animation au scroll
-document.addEventListener("scroll", function() {
-    const header = document.querySelector("header");
-    if (window.scrollY > 50) {
-        header.style.background = "#111";
-    } else {
-        header.style.background = "transparent";
-    }
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    const indicators = document.querySelectorAll('.carousel-indicator');
 
-// Gestion du Dark Mode
-const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
+    let currentIndex = 0;
 
-// Vérifie le thème préféré de l'utilisateur (localStorage)
-if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    themeToggle.textContent = "☀️";
-}
+    const updateCarousel = () => {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
 
-// Switch entre Light et Dark Mode
-themeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex);
+        });
+    };
 
-    // Change l'icône du bouton
-    if (body.classList.contains("dark-mode")) {
-        themeToggle.textContent = "☀️";
-        localStorage.setItem("theme", "dark"); // Sauvegarde du thème
-    } else {
-        themeToggle.textContent = "🌙";
-        localStorage.setItem("theme", "light"); // Sauvegarde du thème
-    }
-});
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
 
-// Message de confirmation sur l'envoi du formulaire
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Merci ! Votre message a été envoyé.");
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    updateCarousel();
 });

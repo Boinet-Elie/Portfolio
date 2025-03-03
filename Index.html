@@ -3,69 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="Styles.css">
-    <script defer src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Portfolio Elie Boinet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="Asset/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Navbar -->
     <header>
         <nav>
-            <h1>Mon Portfolio</h1>
             <ul>
                 <li><a href="#about">À propos</a></li>
+                <li><a href="#bento">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="theme-toggle">🌙</button>
         </nav>
     </header>
 
-    <!-- Section Accueil -->
-    <section id="home">
-        <h2>Bienvenue sur mon portfolio</h2>
-        <p>Je suis un développeur passionné par le web et la création de sites modernes.</p>
-        <a href="#projects" class="btn">Voir mes projets</a>
-    </section>
-
-    <!-- Section À Propos -->
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Développeur web avec expertise en HTML, CSS et JavaScript.</p>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projects">
-        <h2>Mes Projets</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Projet 1</h3>
-                <p>Description du projet.</p>
+    <main>
+        <!-- Section À propos -->
+        <section id="about">
+            <div class="about-content">
+                <div class="profile-container">
+                    <img src="Asset/img/Image profil.jpg" alt="Photo de Elie Boinet" class="profile-picture">
+                </div>
+                <div class="about-text">
+                    <h1 class="animated-title">Elie Boinet</h1>
+                    <h2>Développeur Passionné</h2>
+                    <p>Je suis un développeur avec des compétences en HTML, CSS et JavaScript, avec une passion pour la création de sites web interactifs et esthétiques. J'aime transformer des idées en réalité numérique.</p>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Projet 2</h3>
-                <p>Description du projet.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section Contact -->
-    <section id="contact">
-        <h2>Contactez-moi</h2>
-        <form>
-            <input type="text" placeholder="Votre nom" required>
-            <input type="email" placeholder="Votre email" required>
-            <textarea placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
+        <!-- Section Bento -->
+        <section id="bento">
+            <div class="bento-container">
+                <div class="bento-item" style="--rows: span 2; --columns: 1 / -1;">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="bento-item" style="--rows: span 2;">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="bento-item" style="--rows: span 2; --columns: span 2;">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="bento-item" style="--columns: 1 / -1;">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+                <div class="bento-item" style="--columns: span 2;">
+                    <i class="fab fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="bento-item">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projects">
+            <h2>Mes Projets</h2>
+            <div class="carousel">
+                <button class="carousel-button prev" aria-label="Précédent">&#10094;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="Asset/img/Capture_Portfolio.png" alt="Projet 1" class="project-image">
+                            <div class="project-content">
+                                <h3>Projet 1: Portfolio</h3>
+                                <p></p>
+                                <div class="project-links">
+                                    <a href="lien-du-projet" target="_blank" class="project-button">Voir le projet</a>
+                                    <a href="lien-du-code" target="_blank" class="project-button">Code source</a>
+                                </div>
+                            </div>
+                        </div>   
+        
+                        <div class="carousel-slide">
+                            <img src="Asset/img/Capture_Portfolio.png" alt="Projet 2" class="project-image">
+                            <div class="project-content">
+                                <h3>Projet 2</h3>
+                                <div class="project-links">
+                                    <a href="lien-du-projet" target="_blank" class="project-button">Voir le projet</a>
+                                    <a href="lien-du-code" target="_blank" class="project-button">Code source</a>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+                <button class="carousel-button next" aria-label="Suivant">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Vous avez un projet en tête ou une question ? N'hésitez pas à me contacter !</p>
+            <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+                </div>
+                <div class="form-group">
+                    <label for="request-type">Type de demande</label>
+                    <select id="request-type" name="request-type" required>
+                        <option value="" disabled selected>Sélectionnez une option</option>
+                        <option value="project">Demande de projet</option>
+                        <option value="question">Question générale</option>
+                        <option value="collaboration">Proposition de collaboration</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2024 Mon Portfolio</p>
+        <p>&copy; 2025</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/votre-profil" target="_blank">LinkedIn</a>
+            <a href="https://github.com/votre-profil" target="_blank">GitHub</a>
+        </div>
     </footer>
-
 </body>
 </html>

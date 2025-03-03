@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-button.next');
     const indicators = document.querySelectorAll('.carousel-indicator');
 
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
     let currentIndex = 0;
 
     const updateCarousel = () => {
@@ -38,4 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateCarousel();
+
+     if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'light') {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
+        localStorage.setItem('theme', isLight ? 'dark' : 'light');
+        themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
+
 });

@@ -1,23 +1,43 @@
 /*--------------- General Styles --------------------*/
+
+:root {
+    --background-color: #1a1d23;
+    --text-color: #f0f2f5;
+    --primary-color: #61dafb;
+    --secondary-color: #21a1f1;
+    --card-background: #121416;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] {
+    --background-color: #f0f2f5;
+    --text-color: #1a1d23;
+    --primary-color: #21a1f1;
+    --secondary-color: #61dafb;
+    --card-background: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1d23;
-    color: #f0f2f5;
     line-height: 1.6;
     scroll-behavior: smooth;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* ---------- Header ---------- */
 header {
-    background: #1a1d23;
-    color: #fff;
-    padding: 1.5rem 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background: var(--background-color); 
+    z-index: 1000; 
+    padding: 1rem 0; 
 }
 
 header h1 {
@@ -61,9 +81,11 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #1a1d23;
+    background: var(--background-color);
+    color: var(--text-color);
     text-align: center;
     padding: 2rem;
+    margin-top: 50px;
     box-sizing: border-box;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -217,10 +239,63 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
+.icon-text-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-text-wrapper i {
+    font-size: 3rem;
+    color: #252525;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.icon-text-wrapper .tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    visibility: hidden;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.bento-item:hover .icon-text-wrapper i {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.bento-item:hover .icon-text-wrapper .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.skill-name {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.bento-item:hover .skill-name {
+    color: #ffffff;
+}
+
 /* ---------- Projects ---------- */
 #projects {
     padding: 4rem 2rem;
-    background: #121416;
+    background: var(--background-color);
+    color: var(--text-color);
     margin: 0 auto;
     max-width: 1200px;
     animation: fadeInUp 2s ease-in-out;
@@ -242,7 +317,8 @@ nav ul li a:hover {
 }
 
 .project-card {
-    background: #1a1d23;
+    background: var(--card-background);
+    box-shadow: 0 4px 8px var(--card-shadow);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -283,12 +359,13 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #1a1d23;
+    background: var(--background-color);
+    color: var(--text-color);
     padding: 1.5rem;
 }
 
 .project-image {
-    width: 100%;
+    width: 600px;
     height: 220px;
     object-fit: cover;
     border-radius: 8px;
@@ -388,7 +465,8 @@ nav ul li a:hover {
 /* ---------- Contact ---------- */
 #contact {
     padding: 4rem 2rem;
-    background: #1a1d23;
+    background: var(--background-color);
+    color: var(--text-color);
     margin: 0 auto;
     max-width: 800px;
     text-align: center;
@@ -415,7 +493,8 @@ nav ul li a:hover {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
-    background: #121416;
+    background: var(--background-color);
+    color: var(--text-color);
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 2s ease-in-out;
@@ -441,8 +520,8 @@ nav ul li a:hover {
     padding: 0.75rem;
     border: 1px solid #61dafb;
     border-radius: 8px;
-    background: #1a1d23;
-    color: #f0f2f5;
+    background: var(--background-color);
+    color: var(--text-color);
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -490,8 +569,8 @@ nav ul li a:hover {
 
 /* ---------- Footer ---------- */
 footer {
-    background: #121416;
-    color: #fff;
+    background: var(--background-color);
+    color: var(--text-color);
     text-align: center;
     padding: 1.5rem 0;
     margin-top: 4rem;
@@ -512,6 +591,23 @@ footer a {
 footer a:hover {
     color: #21a1f1;
 }
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    position: absolute; 
+    top: 1.5rem;
+    right: 1.5rem; 
+}
+
+#theme-toggle:hover {
+    color: var(--primary-color);
+}
+
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {

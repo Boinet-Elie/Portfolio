@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme');
 
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+
     let currentIndex = 0;
 
     const updateCarousel = () => {
@@ -22,15 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.addEventListener('click', () => {
         if (currentIndex < slides.length - 1) {
             currentIndex++;
-            updateCarousel();
+        } else {
+            currentIndex = 0;
         }
+        updateCarousel();
     });
 
     prevButton.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
-            updateCarousel();
+        } else {
+            currentIndex = slides.length - 1;
         }
+        updateCarousel();
     });
 
     indicators.forEach((indicator, index) => {
@@ -40,14 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    updateCarousel();
-
-     if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        if (currentTheme === 'light') {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    const autoScroll = () => {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
         }
-    }
+        updateCarousel();
+    };
+
+    let autoScrollInterval = setInterval(autoScroll, 3000);
+
+    const carouselContainer = document.querySelector('.carousel');
+    carouselContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoScrollInterval);
+    });
+
+    carouselContainer.addEventListener('mouseleave', () => {
+        autoScrollInterval = setInterval(autoScroll, 3000);
+    });
+
+    updateCarousel();
 
     themeToggle.addEventListener('click', () => {
         const isLight = document.documentElement.getAttribute('data-theme') === 'light';
@@ -56,4 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
     });
 
+    hamburgerMenu.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
 });

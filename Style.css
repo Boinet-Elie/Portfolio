@@ -141,11 +141,12 @@ nav ul li a:hover {
 .profile-picture {
     width: 350px;
     height: 350px;
+    margin-top: 100px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 60px 30px rgba(97, 218, 251, 0.4);
+    box-shadow: 0 0 20px 10px rgba(97, 218, 251, 0.4);
     transition: transform 0.3s, box-shadow 0.3s;
-    animation: rotateShadow 20s backwards infinite  ;
+    animation: rotateShadow 15s backwards infinite  ;
 }
 
 .profile-picture:hover {

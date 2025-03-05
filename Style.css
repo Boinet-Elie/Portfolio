@@ -11,8 +11,8 @@
 [data-theme="light"] {
     --background-color: #f0f2f5;
     --text-color: #1a1d23;
-    --primary-color: #21a1f1;
-    --secondary-color: #61dafb;
+    --primary-color: #61dafb;
+    --secondary-color: #21a1f1;
     --card-background: #ffffff;
     --card-shadow: rgba(0, 0, 0, 0.1);
 }
@@ -155,14 +155,14 @@ nav ul li a:hover {
 .about-text h1 {
     font-size: 3rem;
     margin: 0;
-    color: #61dafb;
+    color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
     animation: fadeIn 2s ease-in-out;
 }
 
 .about-text h2 {
     font-size: 1.5rem;
-    color: #f0f2f5;
+    color: var(--text-color);
     margin: 1.5rem 0 0.5rem;
     font-family: 'Poppins', sans-serif;
     animation: fadeIn 2.5s ease-in-out;
@@ -175,6 +175,25 @@ nav ul li a:hover {
     color: var(--text-color);
     line-height: 1.8;
     animation: fadeIn 3s ease-in-out;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color); 
+    color: #1a1d23; 
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* ---------- Animations ---------- */
@@ -231,7 +250,7 @@ nav ul li a:hover {
     width: 100%;
     grid-column: var(--columns, span 1);
     grid-row: var(--rows, span 1);
-    background: var(--bg, linear-gradient(135deg, #61dafb, #21a1f1));
+    background: var(--bg, linear-gradient(135deg, var(--primary-color), var(--secondary-color)));
     border-radius: 20px;
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     animation: fadeInUp 2s ease-in-out;

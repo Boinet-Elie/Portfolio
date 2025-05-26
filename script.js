@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     carouselContainer.addEventListener('mouseleave', () => {
-        autoScrollInterval = setInterval(autoScroll, 3000);
+        autoScrollInterval = setInterval(autoScroll, 5000);
     });
 
     updateCarousel();

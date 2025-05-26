@@ -130,9 +130,9 @@ nav ul li a:hover {
 }
 
 .profile-picture {
-    width: 350px;
-    height: 350px;
-    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 20px 10px rgba(97, 218, 251, 0.4);
@@ -157,7 +157,7 @@ nav ul li a:hover {
 }
 
 .about-text p {
-    font-size: 1rem;
+    font-size: 16px;
     max-width: 600px;
     margin: 1.5rem auto;
     color: var(--text-color);
@@ -168,6 +168,7 @@ nav ul li a:hover {
 .download-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
+    margin-bottom: 20px;
     background-color: var(--primary-color); 
     color: #1a1d23; 
     text-decoration: none;
@@ -710,48 +711,6 @@ footer p {
         font-size: 12px;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-image {
-        height: 150px;
-    }
-
-    .project-links {
-        gap: 2rem;
-    }
-
-    .project-button{
-        font-size: 12px;
-        padding: 0.75rem 1.25rem;
-    }
-
-    .carousel {
-        max-width: 100%;
-    }
-
-    .carousel-track-container {
-        height: 300px;
-    }
-
-    .carousel-slide {
-        padding: 1rem;
-    }
-
-    .project-content h3 {
-        font-size: 1.5rem;
-    }
-
-    .project-content p {
-        font-size: 0.9rem;
-    }
-
-    .carousel-button {
-        font-size: 1.2rem;
-        padding: 0.5rem;
-    }
-
     .contact-form {
         padding: 1rem;
     }
@@ -824,40 +783,6 @@ footer p {
 
     .bento-item .tooltip{
         font-size: 9px;
-    }
-
-    .project-image {
-        height: 120px;
-    }
-
-    .project-links {
-        gap: 1rem;
-    }
-
-    .project-button{
-        font-size: 10px;
-        padding: 0.5rem 1rem;
-    }
-
-    .carousel-track-container {
-        height: 250px;
-    }
-
-    .carousel-slide {
-        padding: 0.5rem;
-    }
-
-    .project-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .project-content p {
-        font-size: 0.8rem;
-    }
-
-    .carousel-button {
-        font-size: 1rem;
-        padding: 0.4rem;
     }
 
     .contact-form {

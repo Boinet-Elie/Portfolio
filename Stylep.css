@@ -127,7 +127,7 @@ nav ul li a:hover {
 }
 
 .project-card {
-    background: var(--card-background);
+    background: #151515;
     box-shadow: 0 4px 8px var(--card-shadow);
     border-radius: 12px;
     overflow: hidden;
@@ -143,7 +143,7 @@ nav ul li a:hover {
 /* ---------- Carousel ---------- */
 .carousel {
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
@@ -153,7 +153,8 @@ nav ul li a:hover {
 .carousel-track-container {
     position: relative;
     overflow: hidden;
-    height: 400px;
+    height: 750px;
+    background-color: #151515;
 }
 
 .carousel-track {
@@ -168,16 +169,17 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--background-color);
+    background: #151515;
     color: var(--text-color);
     padding: 1.5rem;
 }
 
 .project-image {
-    width: 600px;
-    height: 220px;
+    width: 800px;
+    height: 420px;
     object-fit: cover;
     border-radius: 15px;
+    margin-bottom: 15px
 }
 
 .project-content {
@@ -193,16 +195,47 @@ nav ul li a:hover {
 
 .project-content p {
     color: #ccc;
-    margin: 0 0 1.5rem;
-    font-size: 1rem;
+    margin: 15px 0;
     line-height: 1.6;
+    font-size: 1rem;
+}
+
+.technologies {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-icon {
+    font-size: 2rem;
+    color: #444;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Couleurs spécifiques pour chaque technologie */
+.fa-html5 {
+    color: #E34F26;
+}
+
+.fa-css3-alt {
+    color: #1572B6;
+}
+
+.fa-js-square {
+    color: #F7DF1E;
 }
 
 .project-links {
     display: flex;
     gap: 8rem;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .project-button {
@@ -497,6 +530,14 @@ footer p {
         font-size: 0.9rem;
     }
 
+    .technologies {
+        gap: 10px;
+    }
+
+    .tech-icon {
+        font-size: 1.5rem;
+    }
+
     .carousel-button {
         font-size: 1.2rem;
         padding: 0.5rem;
@@ -603,6 +644,14 @@ footer p {
 
     .project-content p {
         font-size: 0.8rem;
+    }
+
+    .technologies {
+        gap: 8px;
+    }
+
+    .tech-icon {
+        font-size: 1.2rem;
     }
 
     .carousel-button {

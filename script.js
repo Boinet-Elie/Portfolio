@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-button.next');
     const indicators = document.querySelectorAll('.carousel-indicator');
 
-    const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme');
-
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const navLinks = document.getElementById('nav-links');
 
@@ -68,13 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateCarousel();
-
-    themeToggle.addEventListener('click', () => {
-        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-        document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
-        localStorage.setItem('theme', isLight ? 'dark' : 'light');
-        themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-    });
 
     hamburgerMenu.addEventListener('click', function () {
         navLinks.classList.toggle('active');

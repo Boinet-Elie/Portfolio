@@ -113,11 +113,12 @@ nav ul li a:hover {
 }
 
 #contact h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #61dafb;
     margin-bottom: 1.5rem;
     font-family: 'Poppins', sans-serif;
     animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
 }
 
 #contact p {
@@ -129,10 +130,10 @@ nav ul li a:hover {
 }
 
 .contact-form {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    background: var(--background-color);
+    background: var(--card-background);
     color: var(--text-color);
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -141,7 +142,7 @@ nav ul li a:hover {
 
 .contact-form .form-group {
     margin-bottom: 1.5rem;
-    text-align: left;
+    text-align: center; 
 }
 
 .contact-form label {
@@ -150,12 +151,15 @@ nav ul li a:hover {
     margin-bottom: 0.5rem;
     font-weight: bold;
     font-size: 0.9rem;
+    text-align: center; 
 }
 
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
     width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
     padding: 0.75rem;
     border: 1px solid #61dafb;
     border-radius: 20px;
@@ -163,48 +167,21 @@ nav ul li a:hover {
     color: var(--text-color);
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-    border-color: #21a1f1;
-    box-shadow: 0 0 8px rgba(97, 218, 251, 0.5);
-    outline: none;
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.contact-form select {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2361dafb'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 12px;
+    display: block; 
 }
 
 .contact-form button {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    background: linear-gradient(135deg, #61dafb, #21a1f1);
-    color: #1a1d23;
-    border: none;
-    border-radius: 20px;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 20px;
+    background-color: var(--primary-color); 
+    color: #1a1d23; 
+    text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    animation: pulse 2s infinite;
+    border-radius: 20px;
 }
 
-.contact-form button:hover {
-    background: linear-gradient(135deg, #21a1f1, #61dafb);
-    transform: translateY(-2px);
-}
 /* ---------- Footer ---------- */
 footer {
     background: var(--background-color);
@@ -243,4 +220,129 @@ footer p {
 
 .social-links i {
     font-size: 1.3rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        padding: 0.5rem;
+    }
+
+    .contact-form button {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    } 
+
+    nav {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    width: 100%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background: var(--background-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        padding: 0.4rem;
+    }
+
+    .contact-form button {
+        padding: 0.4rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+
+    .social-links i {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        padding: 0.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        padding: 0.3rem;
+    }
+
+    .contact-form button {
+        padding: 0.3rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        gap: 0.5rem;
+    }
+
+    .social-links a {
+        font-size: 0.8rem;
+    }
+
+    .social-links i {
+        font-size: 1rem;
+    }
 }

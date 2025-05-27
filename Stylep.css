@@ -196,6 +196,7 @@ nav ul li a:hover {
 .project-content p {
     color: #ccc;
     margin: 15px 0;
+    max-width: 800px;
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -218,7 +219,6 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Couleurs spécifiques pour chaque technologie */
 .fa-html5 {
     color: #E34F26;
 }
@@ -360,40 +360,6 @@ footer p {
         gap: 2rem;
     }
 
-    .about-content {
-        margin-top: -50px;
-    }
-
-    .profile-picture {
-        width: 250px;
-        height: 250px;
-    }
-
-    .about-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .about-text h2 {
-        font-size: 1.3rem;
-    }
-
-    .about-text p {
-        font-size: 0.9rem;
-    }
-
-    .bento-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2ch;
-    }
-
-    .bento-item {
-        width: 80%;
-        max-width: 300px;
-    }
-
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -405,20 +371,6 @@ footer p {
 
     .project-links {
         gap: 4rem;
-    }
-
-    .contact-form {
-        padding: 1.5rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-        padding: 0.5rem;
-    }
-
-    .contact-form button {
-        padding: 0.5rem;
     }
 }
 
@@ -453,44 +405,6 @@ footer p {
 
     #hamburger-menu {
         display: block;
-    }
-
-    .about-content {
-        margin-top: -30px;
-    }
-
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-    }
-
-    .about-text h1 {
-        font-size: 2rem;
-    }
-
-    .about-text h2 {
-        font-size: 1.2rem;
-    }
-
-    .about-text p {
-        font-size: 0.8rem;
-    }
-
-    .bento-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2ch;
-    }
-
-    .bento-item {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    .bento-item .tooltip{
-        font-size: 12px;
     }
 
     .projects-grid {
@@ -543,20 +457,6 @@ footer p {
         padding: 0.5rem;
     }
 
-    .contact-form {
-        padding: 1rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-        padding: 0.4rem;
-    }
-
-    .contact-form button {
-        padding: 0.4rem;
-    }
-
     footer p {
         font-size: 0.9rem;
     }
@@ -577,44 +477,6 @@ footer p {
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.2rem;
-    }
-
-    .about-content {
-        margin-top: -20px;
-    }
-
-    .profile-picture {
-        width: 150px;
-        height: 150px;
-    }
-
-    .about-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .about-text h2 {
-        font-size: 1rem;
-    }
-
-    .about-text p {
-        font-size: 0.7rem;
-    }
-
-    .bento-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2ch;
-    }
-
-    .bento-item {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    .bento-item .tooltip{
-        font-size: 9px;
     }
 
     .project-image {
@@ -659,21 +521,7 @@ footer p {
         padding: 0.4rem;
     }
 
-    .contact-form {
-        padding: 0.5rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-        padding: 0.3rem;
-    }
-
-    .contact-form button {
-        padding: 0.3rem;
-    }
-
-    footer p {
+    .footer p {
         font-size: 0.8rem;
     }
 

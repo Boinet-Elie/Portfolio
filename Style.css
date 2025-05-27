@@ -611,33 +611,6 @@ footer p {
         width: 80%;
         max-width: 300px;
     }
-
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .project-image {
-        width: 100%;
-        height: 200px;
-    }
-
-    .project-links {
-        gap: 4rem;
-    }
-
-    .contact-form {
-        padding: 1.5rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-        padding: 0.5rem;
-    }
-
-    .contact-form button {
-        padding: 0.5rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -711,20 +684,6 @@ footer p {
         font-size: 12px;
     }
 
-    .contact-form {
-        padding: 1rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-        padding: 0.4rem;
-    }
-
-    .contact-form button {
-        padding: 0.4rem;
-    }
-
     footer p {
         font-size: 0.9rem;
     }
@@ -783,20 +742,6 @@ footer p {
 
     .bento-item .tooltip{
         font-size: 9px;
-    }
-
-    .contact-form {
-        padding: 0.5rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-        padding: 0.3rem;
-    }
-
-    .contact-form button {
-        padding: 0.3rem;
     }
 
     footer p {

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Elie Boinet - Développeur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="Asset/img/favicon.ico">
+</head>
+<body>
+    <div class="terminal-effect"></div>
+    
+    <header class="glass-header">
+        <nav>
+            <div class="logo">
+                <span class="code-symbol">{</span>EB<span class="code-symbol">}</span>
+            </div>
+            <button id="hamburger-menu" aria-label="Ouvrir le menu">
+                <i class="fas fa-code"></i>
+            </button>
+            <ul id="nav-links">
+                <li><a href="Index.html" class="nav-link"><span class="nav-number">01.</span> Accueil</a></li>
+                <li><a href="Project.html" class="nav-link"><span class="nav-number">02.</span> Projets</a></li>
+                <li><a href="Presentation.html" class="nav-link"><span class="nav-number">03.</span> À propos</a></li>
+                <li><a href="Veille.html" class="nav-link"><span class="nav-number">04.</span> Veille</a></li>
+                <li><a href="Contact.html" class="nav-link"><span class="nav-number">05.</span> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>      
+        <!-- Section Contact -->
+        <section id="contact" class="section dark-section">
+            <div class="section-header">
+                <h2 class="section-title"><span class="section-number">05.</span> Contact</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Prenons contact</h3>
+                    <p>N'hésitez pas à me contacter pour toute opportunité ou collaboration.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>elie.boinet.professionel@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chambéry, France</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/elie-boinet" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Boinet-Elie" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Envoyer le message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="code-symbol">{</span>EB<span class="code-symbol">}</span>
+            </div>
+            <div class="footer-links">
+                <a href="Index.html">Accueil</a>
+                <a href="Presentation.html">À propos</a>
+                <a href="Project.html">Projets</a>
+                <a href="Veille.html">Veille</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/elie-boinet" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Boinet-Elie" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Conçu et développé par Elie Boinet</p>
+            <p>© 2025 Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>

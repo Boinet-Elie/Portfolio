@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Elie Boinet - Développeur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="Asset/img/favicon.ico">
+</head>
+<body>
+    <div class="terminal-effect"></div>
+    
+    <header class="glass-header">
+        <nav>
+            <div class="logo">
+                <span class="code-symbol">{</span>EB<span class="code-symbol">}</span>
+            </div>
+            <button id="hamburger-menu" aria-label="Ouvrir le menu">
+                <i class="fas fa-code"></i>
+            </button>
+            <ul id="nav-links">
+                <li><a href="Index.html" class="nav-link"><span class="nav-number">01.</span> Accueil</a></li>
+                <li><a href="Project.html" class="nav-link"><span class="nav-number">02.</span> Projets</a></li>
+                <li><a href="Presentation.html" class="nav-link"><span class="nav-number">03.</span> À propos</a></li>
+                <li><a href="Veille.html" class="nav-link"><span class="nav-number">04.</span> Veille</a></li>
+                <li><a href="Contact.html" class="nav-link"><span class="nav-number">05.</span> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>    
+        <!-- Section Projets -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2 class="section-title"><span class="section-number">02.</span> Projets</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/Othello_capture.jpg" alt="Projet 1">
+                        <div class="project-links">
+                            <a href="https://github.com/Boinet-Elie/Othello" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Jeu de Othello</h3>
+                        <p>Projet simple de Othello avec integration de boucle while et de conditions if </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/Hirify_capture.jpg" alt="Projet 2">
+                        <div class="project-links">
+                            <a href="https://github.com/l-sauvinet/Hirify" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Hirify</h3>
+                        <p>Plateforme de mise en relation entre Entreprises et Alternants avec système de recommendations</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/Portfolio_capture.jpg" alt="Projet 3">
+                        <div class="project-links">
+                            <a href="Index.html" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio</h3>
+                        <p>Portfolio présentant ma formation BTS SIO et mes projets</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more-projects">
+                <a href="Project.html" class="cta-button">Voir plus de projets</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="code-symbol">{</span>EB<span class="code-symbol">}</span>
+            </div>
+            <div class="footer-links">
+                <a href="Index.html">Accueil</a>
+                <a href="Presentation.html">À propos</a>
+                <a href="Project.html">Projets</a>
+                <a href="Veille.html">Veille</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/elie-boinet" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Boinet-Elie" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Conçu et développé par Elie Boinet</p>
+            <p>© 2025 Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>

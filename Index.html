@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Elie Boinet - Développeur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="Asset/img/favicon.ico">
+</head>
+
+<body>
+    <div class="terminal-effect"></div>
+    
+    <header class="glass-header">
+        <nav>
+            <div class="logo">
+                <span class="code-symbol">{</span>EB<span class="code-symbol">}</span>
+            </div>
+            <button id="hamburger-menu" aria-label="Ouvrir le menu">
+                <i class="fas fa-code"></i>
+            </button>
+            <ul id="nav-links">
+                <li><a href="Index.html" class="nav-link"><span class="nav-number">01.</span> Accueil</a></li>
+                <li><a href="Project.html" class="nav-link"><span class="nav-number">02.</span> Projets</a></li>
+                <li><a href="Presentation.html" class="nav-link"><span class="nav-number">03.</span> À propos</a></li>
+                <li><a href="Veille.html" class="nav-link"><span class="nav-number">04.</span> Veille</a></li>
+                <li><a href="Contact.html" class="nav-link"><span class="nav-number">05.</span> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Hero -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h4 class="hero-subtitle">Bonjour, je suis</h4>
+                    <h1 class="hero-title">Elie Boinet</h1>
+                    <h2 class="hero-tagline">Étudiant en BTS SIO <span class="typing-cursor">|</span></h2>
+                    <p class="hero-description">Développeur passionné spécialisé en solutions logicielles et applications métiers.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="cta-button">Me contacter</a>
+                        <a href="Asset/Documents/Cv.pdf" download="Cv_ElieBoinet.pdf" class="secondary-button">
+                            <i class="fas fa-download"></i> CV
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="code-avatar">
+                        <img src="Images/Image-profil.jpg" alt="Elie Boinet" class="profile-picture">
+                        <div class="code-decoration"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2 class="section-title"><span class="section-number">01.</span> À propos</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Je suis un étudiant passionné par le développement logiciel et les nouvelles technologies. Actuellement en deuxième année de BTS SIO option SLAM, je me spécialise dans la création d'applications web et mobiles.</p>
+                    <p>Mon parcours m'a permis d'acquérir des compétences solides en programmation tout en développant une approche méthodique pour résoudre des problèmes complexes.</p>
+                    <div class="technologies">
+                        <h3>Technologies utilisées :</h3>
+                        <ul class="tech-list">
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Git</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="window-button red"></span>
+                            <span class="window-button yellow"></span>
+                            <span class="window-button green"></span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code class="language-javascript">// À propos de moi
+function describeMe() {
+  const skills = {
+    languages: ['JavaScript', 'Python', 'HTML'],
+    frameworks: ['React', 'Firebase'],
+    tools: ['Git', 'VS Code']
+  };
+  
+  return {
+    name: 'Elie Boinet',
+    education: 'BTS SIO SLAM',
+    passion: 'Développement logiciel',
+    skills
+  };
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Mes compétences -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2 class="section-title"><span class="section-number">02.</span> Compétences</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">CSS3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Firebase</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Outils</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">GitHub</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Terminal</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section BTS SIO -->
+        <section id="bts-sio" class="section dark-section">
+            <div class="section-header">
+                <h2 class="section-title"><span class="section-number">03.</span> BTS SIO</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="bts-content">
+                <p class="bts-intro">Le <strong>BTS Services Informatiques aux Organisations</strong> (SIO) est un diplôme reconnu par l'État de niveau Bac+2 qui forme des professionnels capables de répondre aux besoins informatiques des entreprises.</p>
+                
+                <div class="bts-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="slam">Option SLAM</button>
+                        <button class="tab-button" data-tab="sisr">Option SISR</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="slam">
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="option-text">
+                                <h3>Solutions Logicielles et Applications Métiers</h3>
+                                <p>L'option SLAM forme des spécialistes du développement d'applications. Les compétences acquises couvrent :</p>
+                                <ul>
+                                    <li>Développement d'applications web et mobiles</li>
+                                    <li>Conception et gestion de bases de données</li>
+                                    <li>Cybersécurité des applications</li>
+                                    <li>Gestion de projet agile</li>
+                                    <li>Tests et maintenance des applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="sisr">
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="option-text">
+                                <h3>Solutions d'Infrastructure, Systèmes et Réseaux</h3>
+                                <p>L'option SISR forme des experts en infrastructure informatique. Les compétences acquises incluent :</p>
+                                <ul>
+                                    <li>Administration des systèmes et réseaux</li>
+                                    <li>Virtualisation et cloud computing</li>
+                                    <li>Sécurité des infrastructures</li>
+                                    <li>Maintenance et dépannage</li>
+                                    <li>Gestion de parc informatique</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="code-symbol">{</span>EB<span class="code-symbol">}</span>
+            </div>
+            <div class="footer-links">
+                <a href="Index.html">Accueil</a>
+                <a href="Presentation.html">À propos</a>
+                <a href="Project.html">Projets</a>
+                <a href="Veille.html">Veille</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/elie-boinet" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Boinet-Elie" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Conçu et développé par Elie Boinet</p>
+            <p>© 2025 Tous droits réservés</p>
+        </div>
+    </footer>
+
+</body>
+</html>

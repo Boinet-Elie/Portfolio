@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Elie Boinet - Développeur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="Asset/img/favicon.ico">
+</head>
+<body>
+    <div class="terminal-effect"></div>
+    
+    <header class="glass-header">
+        <nav>
+            <div class="logo">
+                <span class="code-symbol">{</span>EB<span class="code-symbol">}</span>
+            </div>
+            <button id="hamburger-menu" aria-label="Ouvrir le menu">
+                <i class="fas fa-code"></i>
+            </button>
+            <ul id="nav-links">
+                <li><a href="Index.html" class="nav-link"><span class="nav-number">01.</span> Accueil</a></li>
+                <li><a href="Project.html" class="nav-link"><span class="nav-number">02.</span> Projets</a></li>
+                <li><a href="Presentation.html" class="nav-link"><span class="nav-number">03.</span> À propos</a></li>
+                <li><a href="Veille.html" class="nav-link"><span class="nav-number">04.</span> Veille</a></li>
+                <li><a href="Contact.html" class="nav-link"><span class="nav-number">05.</span> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="gestionPatrimoine">
+            <h2><span class="section-number">03.</span> Gestion du patrimoine informatique</h2>
+
+            <div class="card">
+                <h3>Pourquoi gérer le patrimoine informatique ?</h3>
+                <p>La gestion du patrimoine informatique optimise les ressources, renforce la sécurité, réduit les coûts, assure la conformité réglementaire et favorise l’innovation et la compétitivité.</p>
+            </div>
+
+            <div class="card">
+                <h3>1. Recensement des Ressources Numériques</h3>
+                <h3>Objectifs :</h3>
+                <ul>
+                    <li><strong>Connaître l’infrastructure</strong> : Identifier matériels (serveurs, postes de travail, réseaux) et immatériels (logiciels, licences, bases de données).</li>
+                    <li><strong>Optimisation</strong> : Planifier la maintenance pour prévenir les pannes et gérer les coûts.</li>
+                    <li><strong>Sécurité et conformité</strong> : Respecter les normes légales (ex. RGPD).</li>
+                    <li><strong>Prévention des risques</strong> : Anticiper les défaillances via un suivi régulier.</li>
+                </ul>
+                <h3>Méthodes de recensement :</h3>
+                <ul>
+                    <li><strong>Inventaire physique</strong> : Inspection manuelle (marque, modèle, numéro de série, emplacement, état, date d’achat, propriétaire).</li>
+                    <li><strong>Inventaire automatique</strong> : Logiciels comme GLPI pour scanner le réseau (limité pour appareils non connectés).</li>
+                    <li><strong>Maintien à jour</strong> : Audits réguliers, suivi des versions logicielles, correction des anomalies.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>2. Identification des Ressources</h3>
+                <h3>Méthodes :</h3>
+                <ul>
+                    <li><strong>Documentation</strong> : Détaille les caractéristiques pour une gestion efficace.</li>
+                    <li><strong>Catégorisation</strong> : Regroupe les ressources par type.</li>
+                    <li><strong>Étiquetage</strong> : Attribue un identifiant unique à chaque ressource.</li>
+                </ul>
+                <h3>Avantages :</h3>
+                <ul>
+                    <li>Suivi du cycle de vie des ressources.</li>
+                    <li>Planification de la maintenance et du SAV.</li>
+                    <li>Renforcement ciblé de la sécurité.</li>
+                    <li>Optimisation des coûts.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>3. Types de Ressources</h3>
+                <ul>
+                    <li><strong>Matérielles</strong> : Postes de travail, serveurs, périphériques réseau (routeurs, pare-feu), supports de stockage (USB, NAS).</li>
+                    <li><strong>Immatérielles</strong> : Logiciels (OS, applications métiers), licences (contrats, validité), bases de données, fichiers clients.</li>
+                    <li><strong>Services Cloud</strong> : Serveurs virtuels, solutions SaaS.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>4. Normes et Référentiels</h3>
+                <h3>ITIL (Information Technology Infrastructure Library)</h3>
+                <p>Référentiel de bonnes pratiques pour la gestion des services IT.</p>
+                <ul>
+                    <li><strong>Objectifs</strong> : Aligner les services IT sur les besoins de l’entreprise, amélioration continue (via KPI et écoute des utilisateurs), optimiser les ressources (automatisation, gestion des licences).</li>
+                    <li><strong>Pratiques clés</strong> : Gestion des incidents, problèmes, changements, configurations, et niveaux de service (SLA).</li>
+                    <li><strong>Avantages</strong> : Standardisation, réduction des incidents, meilleure communication, optimisation des coûts.</li>
+                </ul>
+                <h3>ISO/IEC 27001</h3>
+                <p>Norme pour le Système de Management de la Sécurité de l’Information (SMSI).</p>
+                <ul>
+                    <li><strong>Objectifs</strong> : Protéger les informations sensibles, gérer les risques, assurer la conformité (ex. RGPD).</li>
+                    <li><strong>Structure</strong> : Contexte, leadership, planification, support, fonctionnement, évaluation, amélioration (114 contrôles de sécurité).</li>
+                    <li><strong>Processus</strong> : Évaluation des risques, mise en œuvre, audits, certification (valable 3 ans).</li>
+                    <li><strong>Avantages</strong> : Protection renforcée, conformité, avantage concurrentiel, efficacité opérationnelle.</li>
+                </ul>
+                <h3>Gestion des Habilitations</h3>
+                <ul>
+                    <li><strong>Définition</strong> : Attribution de droits d’accès selon les rôles pour sécuriser et optimiser.</li>
+                    <li><strong>Pratiques</strong> : Privilège minimum, centralisation (ex. Active Directory : domaines, OU, GPO), audits réguliers.</li>
+                    <li><strong>Avantages</strong> : Réduction des risques de fuites, conformité, efficacité opérationnelle.</li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <section id="tableauSynthese">
+            <h2>Tableau de synthèse</h2>
+            
+        </section>
+
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="code-symbol">{</span>EB<span class="code-symbol">}</span>
+            </div>
+            <div class="footer-links">
+                <a href="Index.html">Accueil</a>
+                <a href="Presentation.html">À propos</a>
+                <a href="Project.html">Projets</a>
+                <a href="Veille.html">Veille</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/elie-boinet" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Boinet-Elie" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Conçu et développé par Elie Boinet</p>
+            <p>© 2025 Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>

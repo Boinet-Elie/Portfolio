@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-secondary);
     color: var(--text-color);
@@ -45,6 +49,100 @@ a:hover {
     color: var(--light-color);
 }
 
+/* Nouvelle section d'animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subtlePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Nouvelle animation pulsation pour les barres de compétences */
+@keyframes skillPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scaleX(0.98);
+    }
+}
+
+@keyframes skillGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(100, 255, 218, 0);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+    }
+}
+
+@keyframes terminalScan {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+@keyframes tabActive {
+    0% {
+        transform: translateY(5px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes smoothBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes smoothScroll {
+    0% {
+        top: 5px;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        top: 20px;
+        opacity: 0;
+    }
+}
+
 /* Effet terminal */
 .terminal-effect {
     position: fixed;
@@ -62,6 +160,7 @@ a:hover {
     pointer-events: none;
     z-index: -1;
     opacity: 0.1;
+    animation: terminalScan 15s linear infinite;
 }
 
 /* Header */
@@ -120,18 +219,18 @@ nav {
     font-size: 0.8rem;
 }
 
-.nav-link::after {
+.nav-link::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 0;
-    height: 1px;
+    height: 2px;
     background-color: var(--primary-color);
-    transition: var(--transition);
+    transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::before {
     width: 100%;
 }
 
@@ -187,6 +286,7 @@ nav {
     display: flex;
     align-items: center;
     padding: 0 2rem;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-content {
@@ -223,13 +323,8 @@ nav {
 }
 
 .typing-cursor {
-    animation: blink 1s infinite;
+    animation: smoothBlink 1.2s infinite;
     color: var(--primary-color);
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
 }
 
 .hero-description {
@@ -244,6 +339,12 @@ nav {
     gap: 1rem;
 }
 
+.cta-button, .secondary-button {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
 .cta-button {
     background-color: transparent;
     color: var(--primary-color);
@@ -252,13 +353,7 @@ nav {
     border-radius: var(--border-radius);
     font-family: var(--font-primary);
     font-size: 0.9rem;
-    transition: var(--transition);
     cursor: pointer;
-}
-
-.cta-button:hover {
-    background-color: rgba(100, 255, 218, 0.1);
-    transform: translateY(-3px);
 }
 
 .secondary-button {
@@ -269,13 +364,35 @@ nav {
     border-radius: var(--border-radius);
     font-family: var(--font-primary);
     font-size: 0.9rem;
-    transition: var(--transition);
     cursor: pointer;
+}
+
+.cta-button::after, .secondary-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.2), transparent);
+    transition: all 0.6s ease;
+}
+
+.cta-button:hover::after, .secondary-button:hover::after {
+    left: 100%;
+}
+
+.cta-button:hover, .secondary-button:hover {
+    animation: subtlePulse 1.5s infinite;
+    transform: translateY(-3px);
+}
+
+.cta-button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
 }
 
 .secondary-button:hover {
     background-color: rgba(204, 214, 246, 0.1);
-    transform: translateY(-3px);
 }
 
 .hero-image {
@@ -286,6 +403,7 @@ nav {
     position: relative;
     width: 300px;
     height: 300px;
+    animation: float 6s ease-in-out infinite;
 }
 
 .profile-picture {
@@ -294,13 +412,14 @@ nav {
     object-fit: cover;
     border-radius: var(--border-radius);
     filter: grayscale(100%) contrast(1);
-    transition: var(--transition);
+    transition: all 0.5s ease;
     position: relative;
     z-index: 1;
 }
 
 .code-avatar:hover .profile-picture {
     filter: none;
+    transform: scale(1.03);
 }
 
 .code-decoration {
@@ -312,12 +431,13 @@ nav {
     border: 2px solid var(--primary-color);
     border-radius: var(--border-radius);
     z-index: 0;
-    transition: var(--transition);
+    transition: all 0.5s ease;
 }
 
 .code-avatar:hover .code-decoration {
     top: 15px;
     left: 15px;
+    transform: translate(-5px, -5px);
 }
 
 .scroll-indicator {
@@ -352,12 +472,7 @@ nav {
     height: 8px;
     background-color: var(--light-color);
     border-radius: 2px;
-    animation: scroll 2s infinite;
-}
-
-@keyframes scroll {
-    0% { top: 5px; opacity: 1; }
-    100% { top: 20px; opacity: 0; }
+    animation: smoothScroll 2s infinite ease-in-out;
 }
 
 /* About section */
@@ -569,6 +684,8 @@ pre {
     height: 100%;
     background-color: var(--primary-color);
     border-radius: 2px;
+    animation: skillBar 1.5s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
 /* BTS SIO section */
@@ -621,6 +738,7 @@ pre {
 
 .tab-button.active {
     color: var(--primary-color);
+    animation: tabActive 0.4s ease-out;
 }
 
 .tab-button.active::after {
@@ -648,6 +766,12 @@ pre {
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.option-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 15px 30px -10px rgba(2, 12, 27, 0.6);
 }
 
 .option-icon {
@@ -702,11 +826,12 @@ pre {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 15px 30px -10px rgba(2, 12, 27, 0.6);
 }
 
 .project-image {
@@ -755,13 +880,14 @@ pre {
     justify-content: center;
     background-color: rgba(100, 255, 218, 0.1);
     border-radius: 50%;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .project-link:hover {
     background-color: var(--primary-color);
     color: var(--dark-color);
-    transform: translateY(-3px);
+    transform: translateY(-3px) rotate(5deg);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
 }
 
 .project-info {
@@ -852,13 +978,14 @@ pre {
     justify-content: center;
     background-color: rgba(204, 214, 246, 0.1);
     border-radius: 50%;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .social-link:hover {
     background-color: var(--primary-color);
     color: var(--dark-color);
-    transform: translateY(-3px);
+    transform: translateY(-3px) rotate(5deg);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
 }
 
 .contact-form {
@@ -910,10 +1037,13 @@ pre {
     max-width: 1200px;
     margin: 0 auto;
     padding: 6rem 2rem;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 #gestionPatrimoine h2, #tableauSynthese h2 {
+    font-family: var(--font-primary);
     font-size: 2.5rem;
+    color: var(--light-color);
     margin-bottom: 3rem;
     position: relative;
     display: inline-block;
@@ -931,31 +1061,39 @@ pre {
     transform-origin: left;
 }
 
+.section-number {
+    color: var(--primary-color);
+    font-family: var(--font-primary);
+}
+
 /* Cards styles */
 .card {
     background-color: rgba(10, 25, 47, 0.5);
     border-radius: var(--border-radius);
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     border: 1px solid rgba(100, 255, 218, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px -15px rgba(2, 12, 27, 0.8);
+    border-color: rgba(100, 255, 218, 0.3);
 }
 
-.card h2 {
+.card h3 {
     color: var(--primary-color);
+    font-family: var(--font-primary);
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
 }
 
-.card h2::after {
+.card h3::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -965,27 +1103,24 @@ pre {
     background-color: var(--primary-color);
 }
 
-.card h3 {
-    color: var(--light-color);
-    font-size: 1.2rem;
-    margin: 1.5rem 0 1rem;
-}
-
 .card p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.7;
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 .card ul {
     padding-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .card li {
     position: relative;
     margin-bottom: 0.8rem;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
     line-height: 1.6;
+    color: var(--text-color);
 }
 
 .card li::before {
@@ -1034,62 +1169,6 @@ pre {
     transform-origin: left;
 }
 
-/* Cards styles */
-.card {
-    background-color: rgba(10, 25, 47, 0.5);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    border: 1px solid rgba(100, 255, 218, 0.1);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px -15px rgba(2, 12, 27, 0.8);
-}
-
-.card h3 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.card h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: var(--primary-color);
-}
-
-.card p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
-}
-
-.card br + br {
-    margin-bottom: 1.5rem;
-    display: block;
-    content: '';
-}
-
-/* Mise en forme des sujets de veille */
-.card p:contains("Hardware :"),
-.card p:contains("Cybersécurité :"),
-.card p:contains("Langages de programmation :"),
-.card p:contains("Logiciels et outils :") {
-    font-weight: 600;
-    color: var(--light-color);
-    margin-top: 1.5rem;
-    display: block;
-}
-
 /* Footer */
 .glass-footer {
     background-color: var(--glass-effect);
@@ -1116,22 +1195,6 @@ pre {
     color: var(--primary-color);
 }
 
-.footer-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.footer-links a {
-    color: var(--light-color);
-    font-family: var(--font-primary);
-    font-size: 0.9rem;
-    transition: var(--transition);
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-}
-
 .footer-social {
     display: flex;
     gap: 1rem;
@@ -1140,7 +1203,7 @@ pre {
 .footer-social a {
     color: var(--light-color);
     font-size: 1.2rem;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .footer-social a:hover {
@@ -1150,9 +1213,6 @@ pre {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(204, 214, 246, 0.1);
     font-size: 0.8rem;
     color: var(--text-color);
 }

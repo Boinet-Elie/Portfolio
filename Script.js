@@ -1,8 +1,3 @@
-/**
- * Script principal pour la gestion des interactions dynamiques du site
- * Ce script gère le menu mobile, le défilement fluide, les onglets, les animations au scroll,
- * l'effet de machine à écrire, et le carrousel de la section veille.
- */
 document.addEventListener('DOMContentLoaded', function() {
     // =========================================================================
     // Gestion du menu mobile (hamburger)

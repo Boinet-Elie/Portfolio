@@ -873,9 +873,9 @@ pre {
 /* =========== Projects section =========== */
 /* Grille de projets */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     margin-top: 2rem;
 }
 
@@ -886,6 +886,7 @@ pre {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    width: 100%;
 }
 
 .project-card:hover {
@@ -896,7 +897,7 @@ pre {
 /* Image du projet */
 .project-image {
     position: relative;
-    height: 200px;
+    height: 500px;
     overflow: hidden;
 }
 

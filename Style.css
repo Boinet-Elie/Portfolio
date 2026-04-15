@@ -1202,6 +1202,7 @@ pre {
 /* Informations de contact */
 .contact-info {
     flex: 1;
+    text-align: center;
 }
 
 .contact-info h3 {
@@ -1220,13 +1221,16 @@ pre {
 /* Détails de contact */
 .contact-details {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 .contact-item i {
@@ -1239,6 +1243,7 @@ pre {
 .social-links {
     display: flex;
     gap: 0.75rem;
+    justify-content: center;
 }
 
 .social-link {
@@ -1269,6 +1274,11 @@ pre {
     padding: 2rem;
     border-radius: var(--border-radius);
     border: 1px solid var(--glass-border);
+}
+
+.contact-form .cta-button {
+    width: 100%;
+    text-align: center;
 }
 
 /* Groupe de formulaire */
@@ -1420,8 +1430,23 @@ pre {
 
 #veille h2 {
     font-size: 1.75rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-weight: 600;
+    text-align: center;
+}
+
+#veille .card {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+#veille .card h3 {
+    text-align: left;
+}
+
+#veille .carousel-container {
+    max-width: 100%;
+    margin: 1.5rem auto 0;
 }
 
 /* =========== Carousel Styles =========== */
@@ -1661,6 +1686,7 @@ pre {
         flex-direction: column-reverse;
         text-align: center;
         gap: 3rem;
+        align-items: center;
     }
 
     .hero-text {
@@ -1686,6 +1712,29 @@ pre {
     .about-content {
         flex-direction: column;
         gap: 3rem;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .code-window {
+        max-width: 100%;
+    }
+
+    .technologies {
+        text-align: center;
+    }
+
+    .tech-list {
+        justify-content: center;
     }
 
     .skills-container {
@@ -1693,18 +1742,54 @@ pre {
         gap: 1.5rem;
     }
 
+    .skills-list {
+        max-width: 600px;
+        margin: 2rem auto 0;
+    }
+
     .option-card {
         flex-direction: column;
         gap: 1.5rem;
+        align-items: flex-start;
     }
 
     .contact-content {
         flex-direction: column;
         gap: 3rem;
+        align-items: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        max-width: 600px;
     }
 
     .carousel-container {
         max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .bts-content {
+        max-width: 100%;
+    }
+
+    .tab-buttons {
+        justify-content: center;
+    }
+
+    #veille {
+        padding: 8rem 2rem;
+    }
+
+    #veille .card {
+        max-width: 800px;
+        margin: 0 auto 2rem;
+    }
+
+    .projects-grid {
+        max-width: 800px;
+        margin: 2rem auto 0;
     }
 }
 
@@ -1751,6 +1836,10 @@ pre {
         padding: 120px 1.25rem 60px;
     }
 
+    .hero-content {
+        align-items: center;
+    }
+
     .hero-title {
         font-size: clamp(2rem, 6vw, 2.5rem);
     }
@@ -1785,13 +1874,32 @@ pre {
         font-size: 1.5rem;
     }
 
+    .section-header {
+        justify-content: center;
+    }
+
     .about-content {
         flex-direction: column-reverse;
         gap: 2rem;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .technologies {
+        text-align: center;
     }
 
     .tech-list {
-        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
     }
 
     .code-window {
@@ -1809,6 +1917,7 @@ pre {
     .tab-buttons {
         flex-wrap: wrap;
         gap: 0;
+        justify-content: center;
     }
 
     .tab-button {
@@ -1819,6 +1928,7 @@ pre {
     .option-card {
         flex-direction: column;
         padding: 1.5rem;
+        align-items: flex-start;
     }
 
     .project-image {
@@ -1832,10 +1942,28 @@ pre {
     .contact-content {
         flex-direction: column;
         gap: 2.5rem;
+        align-items: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
     }
 
     .contact-form {
         padding: 1.5rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-details {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 
     .carousel-container {
@@ -1856,5 +1984,656 @@ pre {
 
     .footer-bottom {
         order: 3;
+    }
+}
+
+/* Très petits écrans (320px et moins) */
+@media screen and (max-width: 480px) {
+    .glass-header {
+        padding: 0.875rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .hero-section {
+        padding: 100px 1rem 50px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.75rem, 8vw, 2.25rem);
+    }
+
+    .hero-tagline {
+        font-size: clamp(1rem, 5vw, 1.1rem);
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        max-width: 260px;
+        gap: 0.75rem;
+    }
+
+    .cta-button, .secondary-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .code-avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-divider {
+        max-width: 200px;
+    }
+
+    .about-content {
+        gap: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .technologies h3 {
+        font-size: 0.9rem;
+    }
+
+    .tech-list {
+        gap: 0.5rem;
+    }
+
+    .tech-list li {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .skills-category {
+        padding: 1.25rem;
+    }
+
+    .skills-category__title {
+        font-size: 0.7rem;
+    }
+
+    .skill-item {
+        padding: 0.4rem;
+    }
+
+    .skill-item__icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .skill-item__name {
+        font-size: 0.85rem;
+    }
+
+    .skill-item__desc {
+        font-size: 0.75rem;
+    }
+
+    .bts-intro {
+        font-size: 0.95rem;
+    }
+
+    .tab-button {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.85rem;
+    }
+
+    .option-card {
+        padding: 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .option-text h3 {
+        font-size: 1rem;
+    }
+
+    .option-text p,
+    .option-text li {
+        font-size: 0.9rem;
+    }
+
+    .project-card__image {
+        min-height: 160px;
+    }
+
+    .project-card__content {
+        padding: 1rem;
+    }
+
+    .project-card__title {
+        font-size: 1.05rem;
+    }
+
+    .project-card__description {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p,
+    .card li {
+        font-size: 0.9rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+
+    .contact-form {
+        padding: 1.25rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-details {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.75rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .synthese-container {
+        padding: 5rem 1rem;
+    }
+
+    .synthese-content__heading {
+        font-size: 1.35rem;
+    }
+
+    .synthese-content__subtitle {
+        font-size: 0.9rem;
+    }
+
+    .synthese-btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    .carousel-caption {
+        padding: 1rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    .footer-content {
+        gap: 1.25rem;
+    }
+
+    .footer-logo {
+        font-size: 1.1rem;
+    }
+
+    .footer-social a {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+
+    /* Veille page specific */
+    #veille {
+        padding: 6rem 1rem;
+    }
+
+    #veille h2 {
+        font-size: 1.35rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #veille .card {
+        padding: 1.25rem;
+    }
+
+    #veille .card h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Centrage spécifique pour 320px */
+@media screen and (max-width: 359px) {
+    .glass-header {
+        padding: 0.75rem 0.875rem;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .section {
+        padding: 2.5rem 0.875rem;
+    }
+
+    .hero-section {
+        padding: 90px 0.875rem 40px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 9vw, 1.75rem);
+    }
+
+    .hero-tagline {
+        font-size: clamp(0.95rem, 6vw, 1rem);
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        max-width: 240px;
+        gap: 0.6rem;
+    }
+
+    .cta-button, .secondary-button {
+        padding: 0.65rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .code-avatar {
+        width: 160px;
+        height: 160px;
+    }
+
+    .scroll-indicator {
+        bottom: 30px;
+    }
+
+    .scroll-indicator span {
+        font-size: 0.65rem;
+    }
+
+    .mouse {
+        width: 18px;
+        height: 30px;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .section-divider {
+        max-width: 150px;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    .technologies h3 {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .tech-list {
+        gap: 0.4rem;
+    }
+
+    .tech-list li {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.75rem;
+    }
+
+    .code-window {
+        padding: 0;
+    }
+
+    .window-header {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .window-button {
+        width: 8px;
+        height: 8px;
+        margin-right: 5px;
+    }
+
+    .code-content {
+        padding: 1rem;
+    }
+
+    pre {
+        font-size: 0.75rem;
+    }
+
+    .skills-category {
+        padding: 1rem;
+    }
+
+    .skills-category__title {
+        font-size: 0.65rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .skills-category__list {
+        gap: 0.5rem;
+    }
+
+    .skill-item {
+        padding: 0.35rem;
+        gap: 0.6rem;
+    }
+
+    .skill-item__icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+
+    .skill-item__name {
+        font-size: 0.8rem;
+    }
+
+    .skill-item__desc {
+        font-size: 0.7rem;
+    }
+
+    .bts-intro {
+        font-size: 0.9rem;
+    }
+
+    .tab-buttons {
+        gap: 0;
+    }
+
+    .tab-button {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .option-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .option-icon {
+        font-size: 1.5rem;
+        min-width: 48px;
+        height: 48px;
+    }
+
+    .option-text h3 {
+        font-size: 0.95rem;
+    }
+
+    .option-text p {
+        font-size: 0.85rem;
+    }
+
+    .option-text li {
+        font-size: 0.85rem;
+        padding-left: 1rem;
+    }
+
+    .project-card__image {
+        min-height: 140px;
+    }
+
+    .project-card__content {
+        padding: 0.875rem;
+    }
+
+    .project-card__tag {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .project-card__title {
+        font-size: 1rem;
+    }
+
+    .project-card__description {
+        font-size: 0.85rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .card li {
+        font-size: 0.85rem;
+        padding-left: 1rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.05rem;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    .contact-item {
+        gap: 0.75rem;
+    }
+
+    .contact-item i {
+        font-size: 0.9rem;
+        width: 20px;
+    }
+
+    .contact-item span {
+        font-size: 0.85rem;
+    }
+
+    .social-link {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-details {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.65rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    .synthese-container {
+        padding: 4rem 0.875rem;
+    }
+
+    .synthese-content__title {
+        font-size: 0.7rem;
+    }
+
+    .synthese-content__heading {
+        font-size: 1.25rem;
+    }
+
+    .synthese-content__subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+    }
+
+    .synthese-actions {
+        gap: 0.75rem;
+    }
+
+    .synthese-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        gap: 0.4rem;
+    }
+
+    .carousel-container {
+        border-radius: var(--border-radius);
+    }
+
+    .carousel-caption {
+        padding: 0.875rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 0.85rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.75rem;
+    }
+
+    .carousel-control {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .carousel-control.prev {
+        left: 0.5rem;
+    }
+
+    .carousel-control.next {
+        right: 0.5rem;
+    }
+
+    .carousel-indicator {
+        width: 6px;
+        height: 6px;
+    }
+
+    .footer-content {
+        gap: 1rem;
+    }
+
+    .footer-logo {
+        font-size: 1.05rem;
+    }
+
+    .footer-social {
+        gap: 0.5rem;
+    }
+
+    .footer-social a {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+    }
+
+    /* Veille page specific */
+    #veille {
+        padding: 5rem 0.875rem;
+    }
+
+    #veille h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    #veille .card {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #veille .card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.875rem;
     }
 }

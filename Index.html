@@ -3,72 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Elie Boinet - Développeur</title>
+    <meta name="description" content="Portfolio d'Élie Boinet - Développeur passionné spécialisé en solutions logicielles et applications métiers.">
+    <title>Élie Boinet - Développeur</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
     <script src="Script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="Asset/img/favicon.ico">
 </head>
 
 <body>
-    <div class="terminal-effect"></div>
-    
+    <div class="terminal-effect" aria-hidden="true"></div>
+
     <header class="glass-header">
-        <nav>
-            <div class="logo">
-                <span class="code-symbol">{</span>ÉB<span class="code-symbol">}</span>
-            </div>
-            <button id="hamburger-menu" aria-label="Ouvrir le menu">
-                <i class="fas fa-code"></i>
+        <nav aria-label="Navigation principale">
+            <a href="Index.html" class="logo" aria-label="Accueil - Élie Boinet">
+                <span class="code-symbol" aria-hidden="true">{</span>ÉB<span class="code-symbol" aria-hidden="true">}</span>
+            </a>
+            <button id="hamburger-menu" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <ul id="nav-links">
-                <li><a href="Index.html" class="nav-link"> Acceuil</a></li>
-                <li><a href="Project.html" class="nav-link"> Projets</a></li>
-                <li><a href="Tableau_Synthese.html" class="nav-link"> Tableau de synthèse</a></li>
-                <li><a href="Veille.html" class="nav-link"> Veille</a></li>
-                <li><a href="Contact.html" class="nav-link"> Contact</a></li>
+            <ul id="nav-links" role="menubar">
+                <li role="none"><a href="Index.html" class="nav-link" role="menuitem">Accueil</a></li>
+                <li role="none"><a href="Project.html" class="nav-link" role="menuitem">Projets</a></li>
+                <li role="none"><a href="Tableau_Synthese.html" class="nav-link" role="menuitem">Tableau de synthèse</a></li>
+                <li role="none"><a href="Veille.html" class="nav-link" role="menuitem">Veille</a></li>
+                <li role="none"><a href="Contact.html" class="nav-link" role="menuitem">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <!-- Section Hero -->
-        <section id="hero" class="hero-section">
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h4 class="hero-subtitle">Bonjour, je suis</h4>
-                    <h1 class="hero-title">Élie Boinet</h1>
-                    <h2 class="hero-tagline"><span class="typing-cursor">|</span></h2>
+                    <p class="hero-subtitle">Bonjour, je suis</p>
+                    <h1 id="hero-title" class="hero-title">Élie Boinet</h1>
+                    <h2 class="hero-tagline"><span class="typing-cursor" aria-hidden="true">|</span></h2>
                     <p class="hero-description">Développeur passionné spécialisé en solutions logicielles et applications métiers.</p>
                     <div class="hero-buttons">
                         <a href="Contact.html" class="cta-button">Me contacter</a>
-                        <a href="Documents/Cv_BOINET_Elie.pdf" download="Cv_BOINET_Elie.pdf" class="secondary-button">
-                            <i class="fas fa-download"></i> CV
+                        <a href="Documents/Cv_BOINET_Elie.pdf" download="Cv_BOINET_Elie.pdf" class="secondary-button" aria-label="Télécharger le CV d'Élie Boinet">
+                            <i class="fas fa-download" aria-hidden="true"></i> CV
                         </a>
-                        <a href="Documents/CERFA BOINET Elie.pdf" download="CERFA_BOINET_Elie.pdf" class="secondary-button">
-                            <i class="fas fa-download"></i> Certificat d'Alternance
+                        <a href="Documents/CERFA BOINET Elie.pdf" download="CERFA_BOINET_Elie.pdf" class="secondary-button" aria-label="Télécharger le certificat d'alternance">
+                            <i class="fas fa-download" aria-hidden="true"></i> Certificat d'Alternance
                         </a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="code-avatar">
-                        <img src="Images/Image-profil.jpg" alt="Elie Boinet" class="profile-picture">
-                        <div class="code-decoration"></div>
-                    </div>
+                    <figure class="code-avatar">
+                        <img src="Images/Image-profil.jpg" alt="Photo de profil d'Élie Boinet" class="profile-picture">
+                        <div class="code-decoration" aria-hidden="true"></div>
+                    </figure>
                 </div>
             </div>
-            <div class="scroll-indicator">
+            <div class="scroll-indicator" aria-hidden="true">
                 <span>Scroll</span>
                 <div class="mouse"></div>
             </div>
         </section>
 
         <!-- Section À propos -->
-        <section id="about" class="section">
+        <section id="about" class="section" aria-labelledby="about-title">
             <div class="section-header">
-                <h2 class="section-title"> À propos</h2>
-                <div class="section-divider"></div>
+                <h2 id="about-title" class="section-title">À propos</h2>
+                <div class="section-divider" aria-hidden="true"></div>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -77,18 +80,18 @@
                     <div class="technologies">
                         <h3>Technologies utilisées :</h3>
                         <ul class="tech-list">
-                            <li>Php</li>
+                            <li>PHP</li>
                             <li>JavaScript</li>
                             <li>Python</li>
                             <li>SQL</li>
                             <li>Git</li>
-                            <li>Csharp</li>
+                            <li>C#</li>
                         </ul>
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="code-window">
-                        <div class="window-header">
+                    <figure class="code-window" aria-label="Extrait de code présentant le profil">
+                        <div class="window-header" aria-hidden="true">
                             <span class="window-button red"></span>
                             <span class="window-button yellow"></span>
                             <span class="window-button green"></span>
@@ -102,144 +105,130 @@ function describeMe() {
         tools: ['Git', 'VS Code']
     };
     return {
-        name: 'Elie Boinet',
+        name: 'Élie Boinet',
         education: 'BTS SIO SLAM',
         passion: 'Développement logiciel',
         skills
     };
 }</code></pre>
                         </div>
-                    </div>
+                    </figure>
                 </div>
             </div>
         </section>
 
-       <!-- Section Mes compétences -->
-        <section id="skills" class="section">
+       <!-- Section Compétences -->
+        <section id="skills" class="section" aria-labelledby="skills-title">
             <div class="section-header">
-                <h2 class="section-title">Compétences</h2>
-                <div class="section-divider"></div>
+                <h2 class="section-title" id="skills-title">Compétences</h2>
+                <div class="section-divider" aria-hidden="true"></div>
             </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
+
+            <div class="skills-list" role="list">
+                <!-- Frontend -->
+                <div class="skills-category" role="listitem">
+                    <h3 class="skills-category__title">Frontend</h3>
+                    <ul class="skills-category__list">
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fab fa-html5"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">HTML5</span>
+                                <span class="skill-item__desc">Structuration sémantique des pages web</span>
                             </div>
-                            <div class="skill-info">
-                                <span class="skill-name">HTML5</span>
-                                <p class="skill-description">Création de structures sémantiques et accessibles pour le web.</p>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fab fa-css3-alt"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">CSS3</span>
+                                <span class="skill-item__desc">Mise en page et animations responsive</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-css3-alt"></i>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fab fa-js-square"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">JavaScript</span>
+                                <span class="skill-item__desc">Interactivité et fonctionnalités dynamiques</span>
                             </div>
-                            <div class="skill-info">
-                                <span class="skill-name">CSS3</span>
-                                <p class="skill-description">Stylisation responsive et animations modernes pour sites web.</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <p class="skill-description">Développement d'interactivités et fonctionnalités dynamiques.</p>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-server"></i>
+
+                <!-- Backend -->
+                <div class="skills-category" role="listitem">
+                    <h3 class="skills-category__title">Backend</h3>
+                    <ul class="skills-category__list">
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fas fa-hashtag"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">C# / .NET</span>
+                                <span class="skill-item__desc">Développement d'applications avec .NET MAUI</span>
                             </div>
-                            <div class="skill-info">
-                                <span class="skill-name">C#</span>
-                                <p class="skill-description">Développement d'applications en utilisant .NET./Maui</p>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fab fa-php"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">PHP</span>
+                                <span class="skill-item__desc">Développement web côté serveur</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fab fa-python"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">Python</span>
+                                <span class="skill-item__desc">Scripts et automatisation</span>
                             </div>
-                            <div class="skill-info">
-                                <span class="skill-name">SQL</span>
-                                <p class="skill-description">Conception et gestion de bases de données relationnelles.</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">Firebase</span>
-                                <p class="skill-description">Gestion de base de données et stockage de données.</p>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Outils</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
+
+                <!-- Outils -->
+                <div class="skills-category" role="listitem">
+                    <h3 class="skills-category__title">Outils</h3>
+                    <ul class="skills-category__list">
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fab fa-git-alt"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">Git</span>
+                                <span class="skill-item__desc">Gestion de versions et collaboration</span>
                             </div>
-                            <div class="skill-info">
-                                <span class="skill-name">Git</span>
-                                <p class="skill-description">Gestion de versions et collaboration sur projets de développement.</p>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fas fa-database"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">SQL / Firebase</span>
+                                <span class="skill-item__desc">Bases de données relationnelles et NoSQL</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-github"></i>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-item__icon" aria-hidden="true"><i class="fab fa-linux"></i></div>
+                            <div class="skill-item__content">
+                                <span class="skill-item__name">Linux</span>
+                                <span class="skill-item__desc">Administration et environnements de développement</span>
                             </div>
-                            <div class="skill-info">
-                                <span class="skill-name">GitHub</span>
-                                <p class="skill-description">Hébergement de projets et travail collaboratif en équipe.</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-linux"></i>
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">Linux</span>
-                                <p class="skill-description">Gestion d'outils cybersécurité et de systèmes Linux.</p>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Section BTS SIO -->
-        <section id="bts-sio" class="section dark-section">
+        <section id="bts-sio" class="section dark-section" aria-labelledby="bts-title">
             <div class="section-header">
-                <h2 class="section-title"> BTS SIO</h2>
-                <div class="section-divider"></div>
+                <h2 id="bts-title" class="section-title">BTS SIO</h2>
+                <div class="section-divider" aria-hidden="true"></div>
             </div>
             <div class="bts-content">
                 <p class="bts-intro">Le <strong>BTS Services Informatiques aux Organisations</strong> (SIO) est un diplôme reconnu par l'État de niveau Bac+2 qui forme des professionnels capables de répondre aux besoins informatiques des entreprises.</p>
-                
+
                 <div class="bts-tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" data-tab="slam">Option SLAM</button>
-                        <button class="tab-button" data-tab="sisr">Option SISR</button>
+                    <div class="tab-buttons" role="tablist" aria-label="Options du BTS SIO">
+                        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="slam" data-tab="slam">Option SLAM</button>
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="sisr" data-tab="sisr">Option SISR</button>
                     </div>
-                    
-                    <div class="tab-content active" id="slam">
-                        <div class="option-card">
-                            <div class="option-icon">
+
+                    <div class="tab-content active" id="slam" role="tabpanel" aria-labelledby="slam-tab">
+                        <article class="option-card">
+                            <div class="option-icon" aria-hidden="true">
                                 <i class="fas fa-laptop-code"></i>
                             </div>
                             <div class="option-text">
@@ -253,12 +242,12 @@ function describeMe() {
                                     <li>Tests et maintenance des applications</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
                     </div>
-                    
-                    <div class="tab-content" id="sisr">
-                        <div class="option-card">
-                            <div class="option-icon">
+
+                    <div class="tab-content" id="sisr" role="tabpanel" aria-labelledby="sisr-tab" hidden>
+                        <article class="option-card">
+                            <div class="option-icon" aria-hidden="true">
                                 <i class="fas fa-server"></i>
                             </div>
                             <div class="option-text">
@@ -272,7 +261,7 @@ function describeMe() {
                                     <li>Gestion de parc informatique</li>
                                 </ul>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -281,22 +270,22 @@ function describeMe() {
 
     <footer class="glass-footer">
         <div class="footer-content">
-            <div class="footer-logo">
-                <span class="code-symbol">{</span>ÉB<span class="code-symbol">}</span>
-            </div>
+            <a href="Index.html" class="footer-logo" aria-label="Accueil - Élie Boinet">
+                <span class="code-symbol" aria-hidden="true">{</span>ÉB<span class="code-symbol" aria-hidden="true">}</span>
+            </a>
             <div class="footer-bottom">
                 <p>Conçu et développé par Élie Boinet</p>
-                <p>© 2025 Tous droits réservés</p>
+                <p>&copy; 2025 Tous droits réservés</p>
             </div>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/elie-boinet-0852543545345335353435453454534/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
+            <nav class="footer-social" aria-label="Liens vers les réseaux sociaux">
+                <a href="https://www.linkedin.com/in/elie-boinet-0852543545345335353435453454534/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Élie Boinet (s'ouvre dans un nouvel onglet)">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                 </a>
-                <a href="https://github.com/Boinet-Elie" target="_blank">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/Boinet-Elie" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub d'Élie Boinet (s'ouvre dans un nouvel onglet)">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
-            </div>
-        </div>   
+            </nav>
+        </div>
     </footer>
 
 </body>

@@ -1,43 +1,42 @@
+/**
+ * Script principal du portfolio BTS SIO
+ * Gère les interactions utilisateur et les animations
+ */
 document.addEventListener('DOMContentLoaded', function() {
+
     // =========================================================================
-    // Gestion du menu mobile (hamburger)
+    // MENU MOBILE
     // =========================================================================
-    
-    // Sélection des éléments du menu hamburger
+
     const hamburger = document.getElementById('hamburger-menu');
     const navLinks = document.getElementById('nav-links');
 
-    // Événement pour afficher/masquer le menu mobile
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', function() {
-            // Bascule la classe 'active' pour afficher ou cacher le menu
             navLinks.classList.toggle('active');
-            // Met à jour l'attribut aria-expanded pour l'accessibilité
             hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
         });
     }
 
     // =========================================================================
-    // Défilement fluide pour les liens d'ancrage
+    // DÉFILEMENT FLUIDE
     // =========================================================================
-    
-    // Sélection de tous les liens commençant par '#'
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault(); // Empêche le saut instantané par défaut
+            e.preventDefault();
 
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return; // Ignore les liens vides
+            if (targetId === '#') return;
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Défilement fluide vers l'élément cible avec un décalage pour la barre de navigation
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
 
-                // Ferme le menu mobile si ouvert
+                // Ferme le menu mobile après la navigation
                 if (navLinks && navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
                     hamburger.setAttribute('aria-expanded', 'false');
@@ -47,77 +46,70 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // =========================================================================
-    // Gestion des onglets pour la section BTS SIO
+    // ONGLETS BTS SIO
     // =========================================================================
-    
-    // Sélection des boutons et contenus des onglets
+
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    // Ajout d'un événement pour chaque bouton d'onglet
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
             const tabId = this.getAttribute('data-tab');
 
-            // Désactive tous les boutons et contenus
+            // Réinitialise tous les onglets
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
 
-            // Active le bouton cliqué et le contenu correspondant
+            // Active l'onglet sélectionné
             this.classList.add('active');
             document.getElementById(tabId).classList.add('active');
         });
     });
 
     // =========================================================================
-    // Animations au défilement
+    // ANIMATIONS AU SCROLL
     // =========================================================================
-    
-    // Fonction pour animer les éléments lorsqu'ils entrent dans la vue
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.section, .project-card, .skill-category, .option-card, .cta-button');
 
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            // Anime l'élément si visible dans la fenêtre
-            if (elementPosition < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
-
-    // Initialisation des éléments à animer
     const animatedElements = document.querySelectorAll('.section, .project-card, .skill-category, .option-card');
+
+    // Initialise les éléments avec une opacité à 0
     animatedElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
 
-    // Ajout de l'écouteur pour le défilement
+    function animateOnScroll() {
+        animatedElements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementPosition < windowHeight - 100) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Exécute une première fois au chargement
+    animateOnScroll();
 
     // =========================================================================
-    // Effet de machine à écrire pour la section hero
+    // EFFET MACHINE À ÉCRIRE
     // =========================================================================
-    
+
     const heroTagline = document.querySelector('.hero-tagline');
     if (heroTagline) {
-        const text = "Développeur FullStack"; // Texte à afficher
+        const text = "Développeur FullStack";
         let index = 0;
 
-        function type() {
+        function typeWriter() {
             if (index < text.length) {
-                // Affiche le texte lettre par lettre avec un curseur
                 heroTagline.innerHTML = text.substring(0, index + 1) + '<span class="typing-cursor">|</span>';
                 index++;
-                setTimeout(type, 100);
+                setTimeout(typeWriter, 100);
             } else {
-                // Fait clignoter le curseur une fois le texte complet
+                // Animation du curseur après la fin du texte
                 setInterval(() => {
                     const cursor = document.querySelector('.typing-cursor');
                     if (cursor) {
@@ -127,14 +119,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Démarre l'effet après un délai
-        setTimeout(type, 1000);
+        setTimeout(typeWriter, 1000);
     }
 
     // =========================================================================
-    // Gestion du carrousel pour la section veille
+    // CARROUSEL VEILLE
     // =========================================================================
-    
+
     const carousel = document.querySelector('.carousel');
     const carouselItems = document.querySelectorAll('.carousel-item');
     const prevBtn = document.querySelector('.carousel-control.prev');
@@ -145,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentIndex = 0;
         const itemCount = carouselItems.length;
 
-        // Création des indicateurs de carrousel
+        // Crée les indicateurs de navigation
         carouselItems.forEach((_, index) => {
             const indicator = document.createElement('div');
             indicator.classList.add('carousel-indicator');
@@ -156,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const indicators = document.querySelectorAll('.carousel-indicator');
 
-        // Met à jour la position du carrousel et les indicateurs
         function updateCarousel() {
             carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
             indicators.forEach((indicator, index) => {
@@ -164,38 +154,31 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Navigue vers une diapositive spécifique
         function goToSlide(index) {
             currentIndex = index;
             updateCarousel();
         }
 
-        // Passe à la diapositive suivante
         function nextSlide() {
             currentIndex = (currentIndex + 1) % itemCount;
             updateCarousel();
         }
 
-        // Passe à la diapositive précédente
         function prevSlide() {
             currentIndex = (currentIndex - 1 + itemCount) % itemCount;
             updateCarousel();
         }
 
-        // Écouteurs pour les boutons de navigation
         nextBtn.addEventListener('click', nextSlide);
         prevBtn.addEventListener('click', prevSlide);
 
-        // Défilement automatique du carrousel
+        // Défilement automatique
         let carouselInterval = setInterval(nextSlide, 5000);
 
-        // Pause au survol
+        // Pause au survol de la souris
         const carouselContainer = document.querySelector('.carousel-container');
         if (carouselContainer) {
-            carouselContainer.addEventListener('mouseenter', () => {
-                clearInterval(carouselInterval);
-            });
-
+            carouselContainer.addEventListener('mouseenter', () => clearInterval(carouselInterval));
             carouselContainer.addEventListener('mouseleave', () => {
                 carouselInterval = setInterval(nextSlide, 5000);
             });
